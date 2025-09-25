@@ -1,0 +1,99 @@
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 60;
+        int c = 30;
+        System.out.println(a>b? (a>c? a:c) :(b>c? b:c) );
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 87;
+        int b = 45;
+        int c = a;
+        a = b;
+        b = c;
+        System.out.println(a+ " " +b);
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 87;
+        int b = 45;
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println(a+ " " +b);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 87;
+        int b = 45;
+        a = a * b;
+        b = a / b;
+        a = a / b;
+        System.out.println(a+ " " +b);
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int a = 87;
+        int b = 45;
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println(a+ " " +b);
+    }
+}
+
+
+
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		for (int i = 2; i*i <= n; i++){
+		    if(n%i==0){
+		        System.out.println("Not a Prime");
+		        return;
+		    }
+		}
+		System.out.println("Prime");
+	}
+}
+
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int s = sc.nextInt();
+        int ans=0,c=0;
+        while(n>0){
+            int r=n%10;
+            if (s != r){
+                c++;
+                ans=r*(int)(Math.pow(10,c-1))+ans;
+            }
+            n=n/10;
+        }
+        System.out.print(ans);
+    }
+}
