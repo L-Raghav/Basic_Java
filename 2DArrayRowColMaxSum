@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int r = sc.nextInt();
+		int c = sc.nextInt();
+		int a[][] = new int[r][c];
+		for(int i=0; i<r; i++){
+		    for(int j=0; j<c; j++){
+		        a[i][j]=sc.nextInt();
+		    }
+		}
+		int rs=cs=Integer.MIN_VALUE;
+		int rr,cr;
+		for(int i=0; i<r; i++){
+		    rr=0,cr=0;
+		    for(int j=0; j<c; j++){
+		        rr=a[i][j];
+		        cr=a[j][i];
+		    }
+		    if(rr>rs)
+		        rs=rr;
+		    if(cr>cs)
+		        cs=cr;
+		}
+		System.out.println(rs);
+		System.out.println(cs);
+	}
+}
