@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int i=0;
+        int b = n;
+        while(b!=0){
+            i++;
+            b=b/10;
+        }
+        int a = (int)Math.pow(10,i);
+        if (n*n % a == n)
+            System.out.println("Automorphic Number");
+        else 
+            System.out.println("Not Automorphic Number");
+    }
+}
