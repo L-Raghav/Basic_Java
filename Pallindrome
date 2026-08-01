@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter word: ");
+		String s = sc.next();
+		String r = "";
+		for(int i = s.length()-1; i >= 0; i--)
+		    r += s.charAt(i);
+	    if(s.equalsIgnoreCase(r)){
+	        System.out.print(s+" is pallindrome");
+	    }
+	    else{
+	        System.out.print(s+" is not pallindrome");
+	    }
+	}
+}
