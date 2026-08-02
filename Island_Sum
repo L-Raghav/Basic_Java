@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int m=sc.nextInt();
+        System.out.print("Enter number of columns: ");
+        int n=sc.nextInt();
+        int[][] matrix=new int[m][n];
+        System.out.println("Enter the matrix values (0 or 1): ");
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                matrix[i][j]=sc.nextInt();
+            }
+        }
+        int count=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(matrix[i][j]==1){
+                    count++;
+                    dfs(matrix,i,j,m,n);
+                }
+            }
+        }
+        System.out.println("Number of islands: "+count);
+    }
+    public static void dfs(int[][] matrix,int i,int j,int m,int n){
+        if(i<0||i>=m||j<0||j>=n||matrix[i][j]==0){
+            return;
+        }
+        matrix[i][j]=0; // Mark as visited
+        dfs(matrix,i+1,j,m,n); // Down
+        dfs(matrix,i-1,j,m,n); // Up
+        dfs(matrix,i,j+1,m,n); // Right
+        dfs(matrix,i,j-1,m,n); // Left
+        dfs(matrix,i+1,j+1,m,n); // Down-Right
+        dfs(matrix,i+1,j-1,m,n); // Down-Left
+        dfs(matrix,i-1,j+1,m,n); // Up-Right
+        dfs(matrix,i-1,j-1,m,n); // Up-Left
+    }
+}
