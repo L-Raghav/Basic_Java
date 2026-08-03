@@ -1,0 +1,76 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList <Integer> a = new ArrayList<>();
+		a.add(1);
+		a.add(2);
+		a.add(3);
+		System.out.println(a);                                          //[1, 2, 3]
+		a.remove(2);
+		System.out.println(a);                                          //[1. 2]
+		a.add(1,5);
+		System.out.println(a);                                          //[1, 5, 2]
+		a.add(0,7);
+		System.out.println(a);                                          //[7, 1, 5, 2]
+		a.set(0,5);
+		System.out.println(a);                                          //[5, 1, 5, 2]
+		System.out.println(a.get(0));                                   //5
+		//a.clear();    
+		//System.out.println(a);                                        //[]
+		System.out.println(a.size());                                   //4
+		System.out.println(a.contains(2));                              //true
+		ArrayList<Integer> b = (ArrayList<Integer>)  a.clone();
+		System.out.println(b);                                          //[5, 1, 5, 2]
+		ArrayList <Integer> c = new ArrayList<>(a);                     
+		System.out.println(c);                                          //[5, 1, 5, 2]
+		ArrayList <Integer> d = new ArrayList<>();                      
+		d = a;
+		System.out.println(d);                                          //[5, 1, 5, 2]
+		
+		System.out.println();
+		
+		ArrayList <String> a1 = new ArrayList<>();
+		a1.add("tw");
+		a1.add("as");
+		a1.add("ge");
+		System.out.println(a1);                                         
+		a1.remove("as");
+		System.out.println(a1);                                          
+		a1.add(1,"abc");
+		System.out.println(a1);                                          
+		a1.add(0,"fe");
+		System.out.println(a1);                                          
+		a1.set(0,"re");
+		System.out.println(a1);                                          
+		System.out.println(a1.get(0));                                   
+		//a1.clear();    
+		//System.out.println(a1);                                       
+		System.out.println(a1.size());                                   
+		System.out.println(a1.contains("asf"));                              
+		ArrayList<String> b1 = (ArrayList<String>)  a1.clone();
+		System.out.println(b1);                                          
+		ArrayList <String> c1 = new ArrayList<>(a1);                     
+		System.out.println(c1);                                          
+		ArrayList <String> d1 = new ArrayList<>();                      
+		d1 = a1;
+	    System.out.println(d1); 
+	    
+	    System.out.println();
+	    
+		ArrayList<Object> al = new ArrayList<>();
+		al.add("Thandu");
+		al.add("Tharik");
+		al.add(69);
+		System.out.println(al);
+		
+		System.out.println();
+		
+		ArrayList wow = new ArrayList<>();
+		wow.add("Masala");
+		wow.add("Dosa");
+		wow.add(56);
+		System.out.println(wow); 
+		
+	}
+}
