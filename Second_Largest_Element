@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		ArrayList <Integer> a = new ArrayList<>();
+		int x = Integer.MIN_VALUE;
+		for(int i=0; i<10; i++){
+		    a.add(sc.nextInt());
+		    if(a.get(i)>x)
+		        x = a.get(i);
+		}
+		a.remove(a.indexOf(x));
+		x = Integer.MIN_VALUE;
+		for(int i=0; i<9; i++){
+		    if(a.get(i)>x)
+		        x = a.get(i);
+		}
+		System.out.print("Second Largest: " +x);
+	}
+}
